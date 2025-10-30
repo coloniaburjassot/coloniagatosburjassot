@@ -11,10 +11,13 @@ collections:
     folder: "gatos"
     create: true
     slug: "{{nombre}}"
-    fields:
-      - { label: "Nombre", name: "nombre", widget: "string" }
-      - { label: "Fecha de nacimiento", name: "fechaNacimiento", widget: "date" }
-      - { label: "Sexo", name: "sexo", widget: "select", options: ["Hembra", "Macho"] }
-      - { label: "Esterilizado", name: "esterilizado", widget: "boolean" }
-      - { label: "Adoptado", name: "adoptado", widget: "boolean" }
-      - { label: "Foto", name: "foto", widget: "image" }
+fields:
+  - { label: "Nombre", name: "title", widget: "string" }
+  - { label: "Sexo", name: "sexo", widget: "select", options: ["Macho", "Hembra"] }
+  - { label: "Fecha de nacimiento", name: "fecha_nacimiento", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
+  - { label: "Esterilizado/a", name: "esterilizado", widget: "select", options: ["Sí", "No"], default: "No" }
+  - { label: "Adoptado/a", name: "adoptado", widget: "select", options: ["Sí", "No"], default: "No" }
+  - { label: "Foto", name: "image", widget: "image" }
+  - { label: "Descripción", name: "body", widget: "markdown" }
+
+
