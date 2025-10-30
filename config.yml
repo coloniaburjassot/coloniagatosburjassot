@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
+
 media_folder: "img"
 public_folder: "/img"
 
@@ -19,5 +20,6 @@ fields:
   - { label: "Adoptado/a", name: "adoptado", widget: "select", options: ["Sí", "No"], default: "No" }
   - { label: "Foto", name: "image", widget: "image" }
   - { label: "Descripción", name: "body", widget: "markdown" }
+
 
 
