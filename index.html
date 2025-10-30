@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Colonia Gatos Campus Burjassot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f7f7f9; /* Fondo gris claro pastel */
+    color: #333333;       /* Texto principal oscuro */
+    margin: 0;
+    padding: 0;
+  }
+
+header {
+  background-color: #e6d6f0; /* tono lila uniforme */
+  padding: 2em;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+
+  header .container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: #333333;
+    margin: 0;
+  }
+
+  header img {
+    max-height: 120px;
+    border-radius: 10px;
+  }
+
+  nav {
+    text-align: center;
+    background: #e6f0ff;
+    padding: 1em;
+  }
+
+  nav button {
+    margin: 0.5em;
+    padding: 0.7em 1.2em;
+    background: linear-gradient(135deg, #d0eaff, #ffd6e0);
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
+  }
+
+  nav button:hover {
+    background: linear-gradient(135deg, #c0ddff, #ffcce0);
+  }
+
+  section {
+    display: none;
+    padding: 2em;
+    max-width: 1000px;
+    margin: auto;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  section.active {
+    display: block;
+  }
+
+  h2 {
+    color: #444;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.3em;
+    margin-top: 0;
+  }
+
+  p, li {
+    line-height: 1.6;
+    color: #333;
+  }
+
+  a {
+    color: #0066cc;
+    text-decoration: underline;
+  }
+
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+  }
+
+  .cat-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 1em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    color: #333;
+  }
+
+  .cat-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1em;
+    object-fit: cover;
+    height: 200px;
+  }
+
+  .donate-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .donate-list li {
+    margin-bottom: 0.8em;
+  }
+
+  .highlight {
+    background: #fff8f0;
+    padding: 1em;
+    border-left: 4px solid #ffa5c0;
+    margin: 1em 0;
+    border-radius: 10px;
+    color: #333;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    margin-top: 2em;
+  }
+
+  .gallery img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    height: 180px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .news-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 2em;
+}
+
+.news-table td {
+  vertical-align: top;
+  padding: 0;
+}
+
+.news-image {
+  width: 33%;
+  padding-right: 2em; /* separa la imagen del texto */
+}
+
+.news-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+}
+
+.news-text {
+  width: 67%;
+  padding-left: 5em;
+  color: #333;
+}
+
+.news-text h3 {
+  margin-top: 0;
+  color: #444;
+}
+
+</style>
+
+</head>
+
+<body>
+  <header>
+    <h1>Colonia Gatos Campus Burjassot</h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('quienes')">Quiénes somos</button>
+    <button onclick="showSection('adopciones')">Adopciones</button>
+    <button onclick="showSection('voluntariado')">Voluntariado</button>
+    <button onclick="showSection('noticias')">Noticias</button>
+    <button onclick="showSection('contacto')">Contacto</button>
+  </nav>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+      const target = document.getElementById(id);
+      if (target) {
+        target.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  </script>
+  <section id="quienes" class="active">
+    <h2>Quiénes somos</h2>
+    <p>Desde 1995, un grupo de voluntarios de la Universitat de València —profesores, estudiantes, personal de administración y servicios, vecinos— cuida la colonia felina del campus de Burjassot siguiendo el protocolo recomendado por las organizaciones protectoras.</p>
+	
+	<p>Cuidamos, alimentamos, esterilizamos y damos en adopción.<p>
+
+    <p>Este grupo está respaldado por la Asociación Pequeños Felinos (APF) y colabora con la Sociedad Valenciana Protectora de Animales y Plantas, Modepran y varias clínicas veterinarias.<p>
+	<p>Nuestra colonia no cuenta con ayudas de ningún tipo a pesar de estar dentro del recinto universitario, y todo lo que hacemos se paga del bolsillo de unos pocos voluntarios. Eso provoca que tengamos deudas continuas y que la economía de estos voluntarios se resienta.<p> 
+	<p>Con esto queremos dar A conocer nuestra situación, que como veis no es la ideal, y solicitar ayuda a todas aquellas personas que valoran nuestra labor para poder seguir ayudando A los gatos del campus.</p>
+    <p><strong>Conócenos:</strong>  
+      <a href="http://www.tecnicasveterinarias.es/index.php/guamipi/183-gatosuniversitarios" target="_blank">Artículo Guamipi</a> |  
+      <a href="http://youtu.be/9Lz_KTcu9rI" target="_blank">Vídeo</a>
+    </p>
+    <div class="gallery">
+      <img src="images/1.jpg">
+      <img src="images/2.jpg">
+      <img src="images/3.jpg">
+      <img src="images/4.jpg">
+      <img src="images/5.jpg">
+      <img src="images/6.jpg">
+      <img src="images/7.jpg">
+      <img src="images/8.jpg">
+      <img src="images/9.jpg">
+      <img src="images/10.jpg">
+	  <img src="images/11.jpg">
+	  <img src="images/12.jpg">
+    </div>
+  </section>
+
+  <section id="adopciones">
+    <h2>Adopciones responsables</h2>
+    <p>Buscamos familias comprometidas. Cada adopción es gratuita e incluye contrato, compromiso de esterilización y seguimiento.</p>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <img src="images/nala.jpg" alt="Nala">
+        <h3>💛 Nala – 3,5 meses</h3>
+        <p>Dulce, tranquila, amante de las siestas al sol y los mimos suaves.</p>
+        <p><strong>Adopción gratuita. Se entrega con contrato de adopción, compromiso de esterilización y seguimiento.</strong></p>
+      </div>
+      <div class="cat-card">
+        <img src="images/alma.jpg" alt="Alma">
+        <h3>🐾 Alma – 4 meses</h3>
+        <p>Tímida al principio, pero muy juguetona. Lista para crecer en un hogar tranquilo.</p>
+        <p><strong>Adopción gratuita. Se entrega con contrato de adopción, compromiso de esterilización y seguimiento.</strong></p>
+      </div>
+      <div class="cat-card">
+        <img src="images/luna.jpg" alt="Luna">
+        <h3>🌙 Luna – en recuperación</h3>
+        <p>Está tomando medicación tras posponer su cirugía. Gracias al sorteo solidario, su operación ya está cubierta.</p>
+        <p><strong>Adopción gratuita. Se entrega con contrato de adopción, compromiso de esterilización y seguimiento.</strong></p>
+      </div>
+      <div class="cat-card">
+        <img src="images/max.jpg" alt="Max">
+        <h3>❤️🐾 Max – 3,5 meses</h3>
+        <p>Max es un peluchón, una mini lapita pedigüeña que estará contigo 24/7. Le encantan los mimos y rascarle la barriguita.</p>
+        <p><strong>Adopción gratuita. Se entrega con contrato de adopción, compromiso de esterilización y seguimiento.</strong></p>
+      </div>
+    </div>
+  </section>
+
+<section id="voluntariado">
+  <h2>Voluntariado</h2>
+  <div class="highlight">
+    <p>🐾 ¡Ayúdanos a que ningún plato se quede vacío! 🐾</p>
+    <p>Más de 80 gatitos esperan cada día su ración de comida y cariño. Necesitamos refuerzos.</p>
+    <p>Solo hace falta un poco de tiempo, ganas y amor por los animales.</p>
+    <p>Si no puedes venir, compartir este mensaje ya es una forma de ayudar 💖</p>
+  </div>
+
+  <p>📞 WhatsApp: +34 637 50 94 86  
+     📷 Instagram: <a href="https://www.instagram.com/gburjasot" target="_blank">@gburjasot</a>  
+     📘 Facebook: <a href="https://www.facebook.com/GBurjasot" target="_blank">Colonia Gatos Burjassot – APF</a></p>
+
+  <div class="gallery">
+    <img src="images/colonia.jpg" alt="Casetas en el campus">
+    <img src="images/colonia2.jpg" alt="Cartel concienciación colonias felinas">
+    <img src="images/colonia3.jpg" alt="Cartel respeto colonias felinas">
+    <img src="images/teaming.jpg" alt="Ilustración gatos Teaming">
+	<img src="images/11.jpg" alt="Adoptados">
+	<img src="images/12.jpg" alt="En la colonia">
+  </div>
+</section>
+
+  
+<section id="contacto">
+  <h2>Contacto y cómo colaborar</h2>
+  <p>Tu ayuda es vital para que podamos seguir cuidando de los gatos del campus. Puedes colaborar de muchas formas:</p>
+  <ul class="donate-list">
+    <li>💳 <strong>PayPal:</strong> <a href="https://www.paypal.com/paypalme/APFBurjasot" target="_blank">APFBurjasot@gmail.com</a></li>
+    <li>🏦 <strong>Transferencia bancaria:</strong> IBAN: ES62 2100 7994 5613 0008 8239</li>
+    <li>📲 <strong>Bizum:</strong> +34 625 57 05 59</li>
+    <li>🧡 <strong>Teaming:</strong> <a href="https://www.teaming.net/asociacionpequenosfelinos" target="_blank">Hazte teamer</a></li>
+    <li>🎁 <strong>Wishlist Amazon:</strong> <a href="https://www.amazon.es/hz/wishlist/ls/1KEOR073HYG4Y" target="_blank">Regalos para la colonia</a></li>
+    <li>🌍 <strong>HelpFreely:</strong> <a href="https://www.helpfreely.org/es/nonprofits/es/asociacion-pequenos-felinos-APF-2152/" target="_blank">Compra y dona sin coste</a></li>
+    <li>📢 <strong>Difunde y comparte:</strong> Cada publicación puede cambiar una vida 💖</li>
+  </ul>
+  <p>📷 Instagram: <a href="https://www.instagram.com/gburjasot" target="_blank">@gburjasot</a><br>
+     📘 Facebook: <a href="https://www.facebook.com/GBurjasot" target="_blank">Colonia Gatos Burjassot – APF</a><br>
+     📞 WhatsApp: +34 637 50 94 86</p>
+
+  <div class="gallery">
+    <img src="images/4.jpg" alt="Foto contacto 1">
+    <img src="images/alma.jpg" alt="Foto contacto 2">
+  </div>
+</section>
+
+
+<section id="noticias">
+  <h2>Noticias y eventos</h2>
+
+  <table class="news-table" cellspacing="50">
+
+    <tr>
+      <td class="news-image" style="padding-right: 5em;">
+        <img src="images/luna.jpg" alt="Luna en recuperación">
+      </td>
+      <td class="news-text">
+        <h3>🌙 Actualización sobre Luna</h3>
+        <p>Nuestra pequeña Luna sigue luchando para recuperarse. Tenía prevista su operación de boquita, pero al llegar al veterinario vieron que estaba muy resfriada. Ha vuelto a la colonia, donde está tomando medicación y descansando.</p>
+        <p>Gracias al sorteo solidario, el dinero para su cirugía ya está cubierto. Solo falta que Luna esté fuerte y lista para dar este paso. ¡Os seguiremos contando su evolución!</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="news-image" style="padding-right: 5em;">
+        <img src="images/loteria.jpg" alt="Cartel de la lotería">
+      </td>
+      <td class="news-text">
+        <h3>🎟️ Lotería solidaria – Navidad 2025</h3>
+        <p>Ya está disponible nuestro número de la suerte para la Lotería de Navidad. Participando, ayudas directamente a los gatos del campus. ¡Gracias por apoyarles también en estas fiestas!</p>
+        <p><strong>¡No te quedes sin tu participación!</strong></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="news-image" style="padding-right: 5em;">
+        <img src="images/marie.jpg" alt="Marie y Curie">
+      </td>
+      <td class="news-text">
+        <h3>✨FINAL FELIZ✨</h3>
+        <p>Marie y Curie, adoptadas juntas la primera vez, devueltas juntas… Y ahora felices juntas en su nuevo hogar 😊</p>
+        <p>Nos alegramos por ellas muchísimo ❤️</p>
+      </td>
+    </tr>
+  </table>
+</section>
+
+
+
+
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => section.classList.remove('active'));
+    const target = document.getElementById(id);
+    if (target) {
+      target.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+</script>

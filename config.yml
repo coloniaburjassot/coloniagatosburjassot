@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  - name: "gatos"
+    label: "Gatos en adopción"
+    folder: "gatos"
+    create: true
+    slug: "{{nombre}}"
+    fields:
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Fecha de nacimiento", name: "fechaNacimiento", widget: "date" }
+      - { label: "Sexo", name: "sexo", widget: "select", options: ["Hembra", "Macho"] }
+      - { label: "Esterilizado", name: "esterilizado", widget: "boolean" }
+      - { label: "Adoptado", name: "adoptado", widget: "boolean" }
+      - { label: "Foto", name: "foto", widget: "image" }
