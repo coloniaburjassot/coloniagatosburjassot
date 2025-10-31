@@ -3,7 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>Colonia Gatos Burjassot CMS</title>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
     <script src="https://unpkg.com/decap-cms@3.0.0/dist/decap-cms.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        if (window.CMS) {
+          window.CMS.init({ config: "/cms/config.yml" });
+        } else {
+          console.error("CMS no está definido");
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="cms"></div>
