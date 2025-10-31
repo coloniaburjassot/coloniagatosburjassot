@@ -2,7 +2,6 @@ backend:
   name: git-gateway
   branch: main
 
-
 media_folder: "img"
 public_folder: "/img"
 
@@ -12,14 +11,16 @@ collections:
     folder: "gatos"
     create: true
     slug: "{{nombre}}"
-fields:
-  - { label: "Nombre", name: "title", widget: "string" }
-  - { label: "Sexo", name: "sexo", widget: "select", options: ["Macho", "Hembra"] }
-  - { label: "Fecha de nacimiento", name: "fecha_nacimiento", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
-  - { label: "Esterilizado/a", name: "esterilizado", widget: "select", options: ["Sí", "No"], default: "No" }
-  - { label: "Adoptado/a", name: "adoptado", widget: "select", options: ["Sí", "No"], default: "No" }
-  - { label: "Foto", name: "image", widget: "image" }
-  - { label: "Descripción", name: "body", widget: "markdown" }
+    fields:
+      - { label: "Nombre", name: "title", widget: "string" }
+      - { label: "Sexo", name: "sexo", widget: "select", options: ["Macho", "Hembra"] }
+      - { label: "Fecha de nacimiento", name: "fecha_nacimiento", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Esterilizado/a", name: "esterilizado", widget: "select", options: ["Sí", "No"], default: "No" }
+      - { label: "Adoptado/a", name: "adoptado", widget: "select", options: ["Sí", "No"], default: "No" }
+      - { label: "Foto", name: "image", widget: "image" }
+      - { label: "Descripción", name: "body", widget: "markdown" }
+
+
 
 
 
