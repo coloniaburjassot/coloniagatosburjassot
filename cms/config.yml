@@ -2,6 +2,7 @@ backend:
   name: github
   repo: coloniaburjassot/coloniagatosburjassot
   branch: main
+  auth_endpoint: https://coloniagatosburjassot.vercel.app/auth
 
 media_folder: "images"
 public_folder: "/images"
