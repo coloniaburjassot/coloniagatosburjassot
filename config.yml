@@ -11,7 +11,7 @@ collections:
     label: "Gatos en adopción"
     folder: "gatos"
     create: true
-    slug: "{{nombre}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Nombre", name: "title", widget: "string" }
       - { label: "Sexo", name: "sexo", widget: "select", options: ["Macho", "Hembra"] }
@@ -20,6 +20,8 @@ collections:
       - { label: "Adoptado/a", name: "adoptado", widget: "select", options: ["Sí", "No"], default: "No" }
       - { label: "Foto", name: "image", widget: "image" }
       - { label: "Descripción", name: "body", widget: "markdown" }
+
+
 
 
 
