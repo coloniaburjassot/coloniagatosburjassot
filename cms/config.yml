@@ -16,8 +16,10 @@ collections:
     fields:
       - { label: "Nombre", name: "title", widget: "string" }
       - { label: "Sexo", name: "sexo", widget: "select", options: ["Macho", "Hembra"] }
-      - { label: "Fecha de nacimiento", name: "fecha_nacimiento", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
-      - { label: "Esterilizado/a", name: "esterilizado", widget: "select", options: ["Sí", "No"], default: "No" }
-      - { label: "Adoptado/a", name: "adoptado", widget: "select", options: ["Sí", "No"], default: "No" }
-      - { label: "Foto", name: "image", widget: "image" }
+      - { label: "Fecha nacimiento", name: "fecha_nacimiento", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Esterilizado", name: "esterilizado", widget: "boolean", default: false }
+      - { label: "Sociable", name: "sociable", widget: "boolean", default: false }
+      - { label: "Estado", name: "estado", widget: "select", options: ["Sí", "No"], default: "No" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
       - { label: "Descripción", name: "body", widget: "markdown" }
+
