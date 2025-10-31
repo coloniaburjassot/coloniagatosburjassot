@@ -3,20 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Colonia Gatos Burjassot CMS</title>
+    <script src="https://unpkg.com/@decapcms/netlify-cms@^3.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
     <div id="cms"></div>
-
-    <!-- Script correcto de DecapCMS -->
-    <script src="https://unpkg.com/@decapcms/netlify-cms@^3.0.0/dist/netlify-cms.js"></script>
-
-    <!-- Iniciar el CMS solo si está definido -->
-    <script>
-      if (window.CMS) {
-        window.CMS.init();
-      } else {
-        console.error("CMS no está definido");
-      }
-    </script>
   </body>
 </html>
