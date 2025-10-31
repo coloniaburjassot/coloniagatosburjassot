@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: coloniaburjassot/coloniagatosburjassot
-
+  branch: main
 
 media_folder: "images"
 public_folder: "/images"
@@ -20,12 +20,3 @@ collections:
       - { label: "Adoptado/a", name: "adoptado", widget: "select", options: ["Sí", "No"], default: "No" }
       - { label: "Foto", name: "image", widget: "image" }
       - { label: "Descripción", name: "body", widget: "markdown" }
-
-
-
-
-
-
-
-
-
